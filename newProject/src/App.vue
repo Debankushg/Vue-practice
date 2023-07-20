@@ -4,7 +4,13 @@
   <!-- <Methods/> -->
   <!-- <Form/> -->
   <!-- <Computed/> -->
-  <Watcher/>
+  <!-- <Watcher/>
+  <Props  name="DEB" heroName="SuperMan"/>
+  <Props name="Ria" heroName="Antman"/>
+  <Props  :name="name" :heroName="heroName"/> -->
+  <!-- <Article id="article-vue" title="Change India" :likes='50' :isPublished="true"/> -->
+  <button @click="showPopup = true">Show Popup</button>
+  <Popup v-show="showPopup" @close="closePopup" />
 </template>
 
 
@@ -15,19 +21,38 @@ import Methods from './components/Methods.vue';
 import Form from './components/Form.vue';
 import Computed from './components/Computed.vue';
 import Watcher from './components/Watcher.vue'
+import Props from './components/Props.vue';
+import Article from './components/Article.vue';
+import Popup from './components/Popup.vue'
 
 
- export default {
-  name:'App',
-  components:{
+export default {
+  name: 'App',
+  components: {
     HelloWorld,
     Conditions,
     Methods,
     Form,
     Computed,
-    Watcher
+    Watcher,
+    Props,
+    Article,
+    Popup
+  },
+  data() {
+    return {
+      name: 'Shiswas',
+      heroName: 'Batman',
+      showPopup: false
+    }
+  },
+  methods: {
+    closePopup(name) {
+      this.showPopup = false;
+      console.log('name', name);
+    }
   }
- }
+}
 </script>
 
 
@@ -38,9 +63,11 @@ import Watcher from './components/Watcher.vue'
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
