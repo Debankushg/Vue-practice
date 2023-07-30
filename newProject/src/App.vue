@@ -72,7 +72,18 @@
   <!-- <HostList/>
   <CreatePost/> -->
 
-  <TemplateRef/>
+  <!-- <TemplateRef/> -->
+
+  <!-- mixins -->
+    <!-- <ClickCounter/>
+    <HoverCounter/> -->
+
+    <!-- composition API -->
+      <!-- <Data/> -->
+
+      <!-- Reactive and Reactivity -->
+      <DemoOne/>
+
 
 </template>
 
@@ -96,8 +107,11 @@ import TabB from './components/TabB.vue';
 import TabC from './components/TabC.vue';
 import HostList from './components/HostList.vue';
 import CreatePost from './components/CreatePost.vue';
-import TemplateRef from './components/TemplateRef.vue'
-
+import TemplateRef from './components/TemplateRef.vue';
+import ClickCounter from './components/ClickCounter.vue'
+import HoverCounter from './components/HoverCounter.vue';
+import Data from './components/Data.vue';
+import DemoOne from './components/DemoOne.vue'
 
 export default {
   name: 'App',
@@ -120,7 +134,11 @@ export default {
     TabC,
     HostList,
     CreatePost,
-    TemplateRef
+    TemplateRef,
+    ClickCounter,
+    HoverCounter,
+    Data,
+    DemoOne
   },
   data() {
     return {
