@@ -5,15 +5,15 @@
 </template>
 
 <script>
+import {ref} from 'vue'
     export default {
         name:'DemoOne',
         setup(){
-            let name = 'vishwas'
+            const name = ref('vishwas')
 
 
             setTimeout(() =>{
-                name= 'codeEvolution'
-                
+                name.value= 'codeEvolution'
             }, 1000)
 
 

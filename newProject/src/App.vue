@@ -82,8 +82,11 @@
       <!-- <Data/> -->
 
       <!-- Reactive and Reactivity -->
-      <DemoOne/>
-
+      <!-- <DemoOne/> -->
+      <!-- <DemoTwo/> -->
+      <!-- <ReplacingMethod/> -->
+      <!-- <VModel/> -->
+      <ReplaceComputed/>
 
 </template>
 
@@ -111,7 +114,11 @@ import TemplateRef from './components/TemplateRef.vue';
 import ClickCounter from './components/ClickCounter.vue'
 import HoverCounter from './components/HoverCounter.vue';
 import Data from './components/Data.vue';
-import DemoOne from './components/DemoOne.vue'
+import DemoOne from './components/DemoOne.vue';
+import DemoTwo  from './components/DemoTwo.vue';
+import ReplacingMethod from './components/ReplacingMethod.vue';
+import VModel from './components/VModel.vue';
+import ReplaceComputed from './components/ReplaceComputed.vue'
 
 export default {
   name: 'App',
@@ -138,7 +145,11 @@ export default {
     ClickCounter,
     HoverCounter,
     Data,
-    DemoOne
+    DemoOne,
+    DemoTwo,
+    ReplacingMethod,
+    VModel,
+    ReplaceComputed
   },
   data() {
     return {
